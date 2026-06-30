@@ -34,19 +34,19 @@ export const Header: React.FC = () => {
 
         {/* Navigation Menu */}
         <nav className="hidden lg:flex items-center gap-8 xl:gap-10 font-bold text-[11px] tracking-widest text-[#3b592d] uppercase">
-          <a href="#" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+          <a href="/" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
             Home
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#about-us" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+          <a href="/#about-us" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
             About Us
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#products" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+          <a href="/products" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
             Products
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#contact" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+          <a href="/#contact" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
             Contact Us
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
