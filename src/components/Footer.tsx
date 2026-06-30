@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
           <ul className="space-y-3.5 text-xs text-zinc-500 font-medium">
             {[
               { label: "Home", href: "/" },
-              { label: "About Us", href: "/#about-us" },
+              { label: "About Us", href: "/about-us" },
               { label: "Products", href: "/products" },
               { label: "Contact Us", href: "/contact" },
             ].map((link) => (

@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
             Home
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="/#about-us" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+          <a href="/about-us" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
             About Us
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
