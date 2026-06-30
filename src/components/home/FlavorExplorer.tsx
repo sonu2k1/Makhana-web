@@ -94,6 +94,32 @@ export const FlavorExplorer: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    quantity: "1",
+    message: ""
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleOpenProduct = (product: Product) => {
+    setQuickViewProduct(product);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      quantity: "1",
+      message: `I'm interested in ordering ${product.name} (${product.flavor}). Please send details.`
+    });
+    setFormSubmitted(false);
+  };
+
+  const handleInquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  };
+
   const filteredProducts = selectedCategory === "all"
     ? PRODUCTS
     : PRODUCTS.filter((p) => p.category === selectedCategory);
@@ -184,7 +210,7 @@ export const FlavorExplorer: React.FC = () => {
 
                   <div className="flex items-center gap-2">
                     <button
-                      onClick={() => setQuickViewProduct(product)}
+                      onClick={() => handleOpenProduct(product)}
                       className="bg-zinc-950 hover:bg-zinc-800 text-white text-xs font-bold py-2.5 px-5 rounded-full shadow-xs hover:shadow-md transition-all cursor-pointer hover:-translate-y-0.5"
                     >
                       View Details
@@ -204,7 +230,7 @@ export const FlavorExplorer: React.FC = () => {
             onClick={() => setQuickViewProduct(null)}
             className="absolute inset-0 cursor-pointer"
           ></div>
-          <div className="relative bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scaleUp z-10 border border-zinc-100">
+          <div className="relative bg-white rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scaleUp z-10 border border-zinc-100 max-h-[90vh] md:max-h-[85vh]">
             {/* Modal Close */}
             <button
               onClick={() => setQuickViewProduct(null)}
@@ -215,45 +241,47 @@ export const FlavorExplorer: React.FC = () => {
               </svg>
             </button>
 
-            {/* Left: Product Media */}
-            <div className="md:w-1/2 bg-zinc-50 flex items-center justify-center p-8 relative">
-              <img
-                src={quickViewProduct.image}
-                alt={quickViewProduct.flavor}
-                className="w-52 h-52 object-contain"
-              />
-              <span className="absolute bottom-4 left-4 text-[10px] bg-zinc-900 text-white font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                🔥 {quickViewProduct.calories} Calories / Portion
-              </span>
-            </div>
+            {/* Left: Product Details & Media */}
+            <div className="md:w-1/2 bg-zinc-50/50 p-6 md:p-8 flex flex-col overflow-y-auto border-r border-zinc-100">
+              <div className="flex-1 space-y-6">
+                <div className="w-full h-48 rounded-2xl bg-zinc-50 flex items-center justify-center relative overflow-hidden select-none p-4 shrink-0">
+                  <img
+                    src={quickViewProduct.image}
+                    alt={quickViewProduct.flavor}
+                    className="w-40 h-40 object-contain"
+                  />
+                  <span className="absolute bottom-3 left-3 text-[9px] bg-zinc-900 text-white font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    🔥 {quickViewProduct.calories} Cal
+                  </span>
+                  <span className="absolute bottom-3 right-3 text-[9px] bg-white text-zinc-800 font-extrabold px-2.5 py-0.5 rounded-full border border-zinc-200/50 uppercase tracking-wider">
+                    {quickViewProduct.weight}
+                  </span>
+                </div>
 
-            {/* Right: Product Details */}
-            <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div>
+                <div className="space-y-3">
                   <span className="text-[10px] bg-[#e8a324]/10 text-amber-700 font-extrabold px-2.5 py-0.5 rounded-sm uppercase tracking-wider">
                     {quickViewProduct.flavor}
                   </span>
-                  <h3 className="text-xl font-black text-zinc-950 uppercase tracking-tight mt-2">
+                  <h3 className="text-xl font-black text-zinc-950 uppercase tracking-tight leading-tight">
                     {quickViewProduct.name}
                   </h3>
-                  <div className="text-lg font-black text-[#3b592d] mt-1">₹{quickViewProduct.price}</div>
+                  <div className="text-2xl font-black text-[#3b592d]">₹{quickViewProduct.price}</div>
                 </div>
 
                 <p className="text-xs text-zinc-500 leading-relaxed">
                   {quickViewProduct.description}
                 </p>
 
-                {/* Ingredients tag list */}
-                <div>
-                  <h4 className="text-[10px] font-black uppercase text-zinc-400 tracking-widest mb-1.5">
+                {/* Ingredients List */}
+                <div className="space-y-2">
+                  <h4 className="text-[10px] font-black uppercase text-zinc-400 tracking-widest">
                     Ingredients
                   </h4>
                   <div className="flex flex-wrap gap-1">
                     {quickViewProduct.ingredients.map((ing, idx) => (
                       <span
                         key={idx}
-                        className="text-[9px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded-sm border border-zinc-200/20"
+                        className="text-[9px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded-sm border border-zinc-200/25"
                       >
                         {ing}
                       </span>
@@ -261,14 +289,124 @@ export const FlavorExplorer: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Close CTA */}
-              <button
-                onClick={() => setQuickViewProduct(null)}
-                className="w-full bg-zinc-950 hover:bg-zinc-800 text-white font-bold text-xs py-3 rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2 hover:-translate-y-0.5"
-              >
-                <span>Close Details</span>
-              </button>
+            {/* Right: Inquiry Form */}
+            <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between overflow-y-auto bg-white">
+              {!formSubmitted ? (
+                <form onSubmit={handleInquirySubmit} className="space-y-4">
+                  <div className="space-y-1">
+                    <h3 className="text-base font-black text-zinc-950 uppercase tracking-tight">
+                      Quick Inquiry
+                    </h3>
+                    <p className="text-[10px] text-zinc-400 font-medium">
+                      Fill the form to request a call back or place an order.
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-2">
+                    {/* Name */}
+                    <div>
+                      <label className="block text-[10px] font-black uppercase text-zinc-500 tracking-wider mb-1">
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full py-2 px-3.5 border border-zinc-200 rounded-lg text-xs bg-zinc-50/50 focus:outline-none focus:border-[#7ca832] focus:ring-1 focus:ring-[#7ca832] font-medium"
+                        placeholder="Enter your name"
+                      />
+                    </div>
+
+                    {/* Email & Phone */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div>
+                        <label className="block text-[10px] font-black uppercase text-zinc-500 tracking-wider mb-1">
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full py-2 px-3.5 border border-zinc-200 rounded-lg text-xs bg-zinc-50/50 focus:outline-none focus:border-[#7ca832] focus:ring-1 focus:ring-[#7ca832] font-medium"
+                          placeholder="your@email.com"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[10px] font-black uppercase text-zinc-500 tracking-wider mb-1">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          required
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full py-2 px-3.5 border border-zinc-200 rounded-lg text-xs bg-zinc-50/50 focus:outline-none focus:border-[#7ca832] focus:ring-1 focus:ring-[#7ca832] font-medium"
+                          placeholder="Phone number"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Quantity */}
+                    <div>
+                      <label className="block text-[10px] font-black uppercase text-zinc-500 tracking-wider mb-1">
+                        Estimated Packets Quantity
+                      </label>
+                      <input
+                        type="number"
+                        min="1"
+                        required
+                        value={formData.quantity}
+                        onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
+                        className="w-full py-2 px-3.5 border border-zinc-200 rounded-lg text-xs bg-zinc-50/50 focus:outline-none focus:border-[#7ca832] focus:ring-1 focus:ring-[#7ca832] font-medium"
+                      />
+                    </div>
+
+                    {/* Pre-filled Message */}
+                    <div>
+                      <label className="block text-[10px] font-black uppercase text-zinc-500 tracking-wider mb-1">
+                        Message / Special Request
+                      </label>
+                      <textarea
+                        rows={3}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full py-2 px-3.5 border border-zinc-200 rounded-lg text-xs bg-zinc-50/50 focus:outline-none focus:border-[#7ca832] focus:ring-1 focus:ring-[#7ca832] font-medium resize-none"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-[#3b592d] hover:bg-[#2d4322] text-white font-bold text-xs py-3 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2 hover:-translate-y-0.5 mt-4"
+                  >
+                    <span>Submit Inquiry</span>
+                  </button>
+                </form>
+              ) : (
+                <div className="flex-1 flex flex-col items-center justify-center text-center p-6 space-y-4">
+                  <div className="w-16 h-16 bg-[#7ca832]/10 rounded-full flex items-center justify-center text-[#7ca832] text-3xl">
+                    ✓
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-black text-zinc-950 uppercase tracking-tight">
+                      Inquiry Sent!
+                    </h3>
+                    <p className="text-xs text-zinc-500 leading-relaxed font-medium">
+                      Thank you, <span className="font-bold text-zinc-800">{formData.name}</span>. Your inquiry for <span className="font-bold text-zinc-800">{quickViewProduct.name}</span> has been received. Our sales team will get in touch with you at <span className="font-bold text-zinc-800">{formData.phone}</span> shortly.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setQuickViewProduct(null)}
+                    className="bg-zinc-950 hover:bg-zinc-800 text-white font-bold text-xs px-6 py-2.5 rounded-full transition-all cursor-pointer mt-4"
+                  >
+                    Close Modal
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
