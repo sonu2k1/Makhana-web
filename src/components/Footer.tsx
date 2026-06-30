@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
               { label: "Home", href: "/" },
               { label: "About Us", href: "/#about-us" },
               { label: "Products", href: "/products" },
-              { label: "Contact Us", href: "/#contact" },
+              { label: "Contact Us", href: "/contact" },
             ].map((link) => (
               <li key={link.label}>
                 <a href={link.href} className="hover:text-[#7ca832] transition-colors">
