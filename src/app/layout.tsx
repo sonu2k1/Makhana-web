@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ghasphus Makhana - Calories on Count | 100% Organic Superfoods",
+  title: "Super Food Bharat - Calories on Count | 100% Organic Superfoods",
   description: "Experience premium roasted Makhana (fox nuts / lotus seeds) slow-cooked in olive oil with handpicked spices. Diabetic-friendly, gluten-free, and high protein snacks.",
 };
 

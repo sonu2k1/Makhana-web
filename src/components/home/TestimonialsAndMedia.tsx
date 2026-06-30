@@ -12,19 +12,19 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    text: "I recently tried Ghasphus Himalayan Vedic Turmeric and was amazed by the quality of the product. The turmeric has a rich, warm flavor that enhances the taste of my cooking.",
+    text: "I recently tried Super Food Bharat Himalayan Vedic Turmeric and was amazed by the quality of the product. The turmeric has a rich, warm flavor that enhances the taste of my cooking.",
     name: "Priyanka Suriyal",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces",
   },
   {
     id: 2,
-    text: "Ghasphus Roasted Makhana has become my go-to evening snack. It's light, super crunchy, and helps me keep my calorie count strictly under control. Simply love the Peri Peri flavor!",
+    text: "Super Food Bharat Roasted Makhana has become my go-to evening snack. It's light, super crunchy, and helps me keep my calorie count strictly under control. Simply love the Peri Peri flavor!",
     name: "Amit Sharma",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces",
   },
   {
     id: 3,
-    text: "Finding clean, organic, and non-adulterated products is so hard these days. Ghasphus's commitment to quality is evident in their Vedic Turmeric and Roasted Makhana. Highly recommend it to all my patients.",
+    text: "Finding clean, organic, and non-adulterated products is so hard these days. Super Food Bharat's commitment to quality is evident in their Vedic Turmeric and Roasted Makhana. Highly recommend it to all my patients.",
     name: "Dr. Sunita Rao",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces",
   },
@@ -99,9 +99,8 @@ export const TestimonialsAndMedia: React.FC = () => {
             <button
               key={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`h-2 rounded-full transition-all cursor-pointer ${
-                idx === activeIndex ? "w-6 bg-[#3b592d]" : "w-2 bg-zinc-300 hover:bg-zinc-400"
-              }`}
+              className={`h-2 rounded-full transition-all cursor-pointer ${idx === activeIndex ? "w-6 bg-[#3b592d]" : "w-2 bg-zinc-300 hover:bg-zinc-400"
+                }`}
               aria-label={`Go to slide ${idx + 1}`}
             ></button>
           ))}
@@ -151,57 +150,57 @@ export const TestimonialsAndMedia: React.FC = () => {
       <div className="w-full h-24 sm:h-32 md:h-44 bg-[#faf8f5] overflow-hidden select-none shrink-0 relative mt-8">
         <svg className="w-full h-full" viewBox="0 0 1440 180" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Sky background */}
-          <rect width="1440" height="180" fill="#fdfbf7"/>
-          
+          <rect width="1440" height="180" fill="#fdfbf7" />
+
           {/* Hills */}
-          <path d="M-100 180 C 100 140, 300 130, 450 180 Z" fill="#8cb369" opacity="0.3"/>
-          <path d="M300 180 C 500 120, 800 110, 1000 180 Z" fill="#4d7c58" opacity="0.15"/>
-          <path d="M800 180 C 1000 130, 1200 120, 1550 180 Z" fill="#8cb369" opacity="0.25"/>
+          <path d="M-100 180 C 100 140, 300 130, 450 180 Z" fill="#8cb369" opacity="0.3" />
+          <path d="M300 180 C 500 120, 800 110, 1000 180 Z" fill="#4d7c58" opacity="0.15" />
+          <path d="M800 180 C 1000 130, 1200 120, 1550 180 Z" fill="#8cb369" opacity="0.25" />
 
           {/* Sun */}
-          <circle cx="150" cy="80" r="30" fill="#f59e0b" opacity="0.9"/>
-          
+          <circle cx="150" cy="80" r="30" fill="#f59e0b" opacity="0.9" />
+
           {/* Birds */}
-          <path d="M190 70 Q195 65 200 70 Q205 65 210 70" stroke="#71717a" strokeWidth="1.5" strokeLinecap="round"/>
-          <path d="M220 75 Q223 71 226 75 Q229 71 232 75" stroke="#71717a" strokeWidth="1.2" strokeLinecap="round"/>
+          <path d="M190 70 Q195 65 200 70 Q205 65 210 70" stroke="#71717a" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M220 75 Q223 71 226 75 Q229 71 232 75" stroke="#71717a" strokeWidth="1.2" strokeLinecap="round" />
 
           {/* Palm Trees */}
-          <path d="M 280 180 Q 285 130 290 90" stroke="#78350f" strokeWidth="4" strokeLinecap="round"/>
-          <path d="M 290 90 Q 270 70 250 80 M 290 90 Q 275 105 260 115 M 290 90 Q 300 70 315 65 M 290 90 Q 310 95 325 105 M 290 90 Q 295 110 300 125" stroke="#15803d" strokeWidth="3" strokeLinecap="round"/>
-          
-          <path d="M 580 180 Q 575 125 570 80" stroke="#78350f" strokeWidth="5" strokeLinecap="round"/>
-          <path d="M 570 80 Q 550 65 530 75 M 570 80 Q 555 95 540 105 M 570 80 Q 580 60 595 55 M 570 80 Q 590 85 605 95" stroke="#15803d" strokeWidth="4" strokeLinecap="round"/>
+          <path d="M 280 180 Q 285 130 290 90" stroke="#78350f" strokeWidth="4" strokeLinecap="round" />
+          <path d="M 290 90 Q 270 70 250 80 M 290 90 Q 275 105 260 115 M 290 90 Q 300 70 315 65 M 290 90 Q 310 95 325 105 M 290 90 Q 295 110 300 125" stroke="#15803d" strokeWidth="3" strokeLinecap="round" />
 
-          <path d="M 1120 180 Q 1125 135 1130 95" stroke="#78350f" strokeWidth="4" strokeLinecap="round"/>
-          <path d="M 1130 95 Q 1110 75 1090 85 M 1130 95 Q 1145 75 1160 80 M 1130 95 Q 1150 100 1165 110" stroke="#15803d" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M 580 180 Q 575 125 570 80" stroke="#78350f" strokeWidth="5" strokeLinecap="round" />
+          <path d="M 570 80 Q 550 65 530 75 M 570 80 Q 555 95 540 105 M 570 80 Q 580 60 595 55 M 570 80 Q 590 85 605 95" stroke="#15803d" strokeWidth="4" strokeLinecap="round" />
+
+          <path d="M 1120 180 Q 1125 135 1130 95" stroke="#78350f" strokeWidth="4" strokeLinecap="round" />
+          <path d="M 1130 95 Q 1110 75 1090 85 M 1130 95 Q 1145 75 1160 80 M 1130 95 Q 1150 100 1165 110" stroke="#15803d" strokeWidth="3" strokeLinecap="round" />
 
           {/* Cows (Stylized silhouettes) */}
-          <rect x="180" y="140" width="35" height="20" rx="3" fill="#1e293b"/>
-          <rect x="182" y="160" width="4" height="15" fill="#1e293b"/>
-          <rect x="210" y="160" width="4" height="15" fill="#1e293b"/>
-          <circle cx="218" cy="138" r="7" fill="#1e293b"/>
-          <path d="M 180 145 Q 170 148 165 142" stroke="#1e293b" strokeWidth="2" strokeLinecap="round"/>
+          <rect x="180" y="140" width="35" height="20" rx="3" fill="#1e293b" />
+          <rect x="182" y="160" width="4" height="15" fill="#1e293b" />
+          <rect x="210" y="160" width="4" height="15" fill="#1e293b" />
+          <circle cx="218" cy="138" r="7" fill="#1e293b" />
+          <path d="M 180 145 Q 170 148 165 142" stroke="#1e293b" strokeWidth="2" strokeLinecap="round" />
 
-          <rect x="1160" y="135" width="40" height="22" rx="3" fill="#334155"/>
-          <rect x="1165" y="157" width="5" height="18" fill="#334155"/>
-          <rect x="1192" y="157" width="5" height="18" fill="#334155"/>
-          <circle cx="1205" cy="133" r="8" fill="#334155"/>
-          <path d="M 1160 140 Q 1150 142 1146 138" stroke="#334155" strokeWidth="2.5" strokeLinecap="round"/>
+          <rect x="1160" y="135" width="40" height="22" rx="3" fill="#334155" />
+          <rect x="1165" y="157" width="5" height="18" fill="#334155" />
+          <rect x="1192" y="157" width="5" height="18" fill="#334155" />
+          <circle cx="1205" cy="133" r="8" fill="#334155" />
+          <path d="M 1160 140 Q 1150 142 1146 138" stroke="#334155" strokeWidth="2.5" strokeLinecap="round" />
 
           {/* Farmers Silhouettes */}
-          <circle cx="80" cy="148" r="6" fill="#0f766e"/>
-          <path d="M 80 154 L 80 170 M 80 158 L 72 165 M 80 158 L 88 165" stroke="#0f766e" strokeWidth="2.5" strokeLinecap="round"/>
-          <circle cx="70" cy="170" r="5" fill="#ca8a04"/>
+          <circle cx="80" cy="148" r="6" fill="#0f766e" />
+          <path d="M 80 154 L 80 170 M 80 158 L 72 165 M 80 158 L 88 165" stroke="#0f766e" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx="70" cy="170" r="5" fill="#ca8a04" />
 
-          <circle cx="720" cy="145" r="5.5" fill="#b45309"/>
-          <path d="M 720 150 L 725 168 M 720 154 L 710 148 L 705 155 M 720 154 L 730 162" stroke="#b45309" strokeWidth="2.5" strokeLinecap="round"/>
+          <circle cx="720" cy="145" r="5.5" fill="#b45309" />
+          <path d="M 720 150 L 725 168 M 720 154 L 710 148 L 705 155 M 720 154 L 730 162" stroke="#b45309" strokeWidth="2.5" strokeLinecap="round" />
 
-          <circle cx="980" cy="140" r="5" fill="#4d7c0f"/>
-          <path d="M 980 145 L 980 163 M 980 149 L 972 143 M 980 149 L 988 143" stroke="#4d7c0f" strokeWidth="2.5" strokeLinecap="round"/>
-          <ellipse cx="980" cy="132" rx="10" ry="4" fill="#a16207"/>
+          <circle cx="980" cy="140" r="5" fill="#4d7c0f" />
+          <path d="M 980 145 L 980 163 M 980 149 L 972 143 M 980 149 L 988 143" stroke="#4d7c0f" strokeWidth="2.5" strokeLinecap="round" />
+          <ellipse cx="980" cy="132" rx="10" ry="4" fill="#a16207" />
 
           {/* Ground Grass Line */}
-          <rect y="170" width="1440" height="10" fill="#3b592d"/>
+          <rect y="170" width="1440" height="10" fill="#3b592d" />
         </svg>
       </div>
     </section>

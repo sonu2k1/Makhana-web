@@ -12,7 +12,7 @@ export const FarmToFork: React.FC = () => {
             From Farm to Fork
           </h2>
           <p className="text-sm text-zinc-500 font-medium leading-relaxed">
-            Experience the Farm to Fork Journey with Ghasphus, Bringing Nature's Best to Your Plate
+            Experience the Farm to Fork Journey with Super Food Bharat, Bringing Nature's Best to Your Plate
           </p>
         </div>
 
@@ -45,12 +45,12 @@ export const FarmToFork: React.FC = () => {
               </span>
             </div>
 
-            {/* Top Circle: Ghasphus Team */}
+            {/* Top Circle: Super Food Bharat Team */}
             <div className="flex flex-col items-center space-y-3 group md:-translate-y-8">
               <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/images/farm_to_fork_team.png"
-                  alt="Ghasphus Team Store"
+                  alt="Super Food Bharat Team Store"
                   className="w-full h-full object-cover"
                 />
               </div>

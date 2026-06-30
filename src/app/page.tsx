@@ -8,8 +8,6 @@ import { WomenFarmers } from "@/components/home/WomenFarmers";
 import { FarmToFork } from "@/components/home/FarmToFork";
 import { FlavorExplorer } from "@/components/home/FlavorExplorer";
 import { MakhanaMagic } from "@/components/home/MakhanaMagic";
-import { VedicTurmeric } from "@/components/home/VedicTurmeric";
-import { CalorieCalculator } from "@/components/home/CalorieCalculator";
 import { FarmStats } from "@/components/home/FarmStats";
 import { BlogAndPillars } from "@/components/home/BlogAndPillars";
 import { TestimonialsAndMedia } from "@/components/home/TestimonialsAndMedia";
@@ -28,7 +26,7 @@ export default function Home() {
         {/* Text Marquee running ticker */}
         <RunningTicker />
 
-        {/* Ghasphus Farm philosophy */}
+        {/* Super Food Bharat Farm philosophy */}
         <FarmPhilosophy />
 
         {/* Live Farm video showcase */}
@@ -46,13 +44,7 @@ export default function Home() {
         {/* Wholesome stats details */}
         <MakhanaMagic />
 
-        {/* Ghasphus Vedic Turmeric benefits */}
-        <VedicTurmeric />
-
-        {/* Portions-saving Calorie calculator chart */}
-        <CalorieCalculator />
-
-        {/* Ghasphus stats and banner */}
+        {/* Super Food Bharat stats and banner */}
         <FarmStats />
 
         {/* Brand pillars and latest blog posts */}

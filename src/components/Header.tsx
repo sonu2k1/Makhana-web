@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-[#3b592d] font-black text-xl tracking-tight leading-none uppercase">
-              Ghasphus
+              Super Food Bharat
             </span>
             <span className="text-[9px] text-[#7ca832] font-semibold tracking-widest uppercase mt-0.5 leading-none">
               Calories on Count
@@ -33,74 +33,22 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Navigation Menu */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-xs tracking-wider text-[#1e251f] uppercase">
-          <a href="#" className="hover:text-[#7ca832] transition-colors py-2">
-            Shop All
+        <nav className="hidden lg:flex items-center gap-8 xl:gap-10 font-bold text-[11px] tracking-widest text-[#3b592d] uppercase">
+          <a href="#" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+            Home
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
-
-          {/* Shop By Category Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setActiveDropdown("category")}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="hover:text-[#7ca832] transition-colors py-2 flex items-center gap-1 cursor-pointer">
-              Shop By Category
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {activeDropdown === "category" && (
-              <div className="absolute top-full left-0 bg-white border border-zinc-100 shadow-xl rounded-lg py-2 w-48 text-zinc-700 animate-fadeIn">
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  Roasted Makhana
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  Flavored Makhana
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  Aarogya Diet Mix
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  Makhana Sweets
-                </a>
-              </div>
-            )}
-          </div>
-
-          {/* Philosophy Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setActiveDropdown("philosophy")}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="hover:text-[#7ca832] transition-colors py-2 flex items-center gap-1 cursor-pointer">
-              Philosophy
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {activeDropdown === "philosophy" && (
-              <div className="absolute top-full left-0 bg-white border border-zinc-100 shadow-xl rounded-lg py-2 w-48 text-zinc-700 animate-fadeIn">
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  100% Organic Sourcing
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  Zero Calories Counted
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-zinc-50 hover:text-[#7ca832] text-xs transition-colors">
-                  Empowering Indian Farmers
-                </a>
-              </div>
-            )}
-          </div>
-
-          <a href="#" className="hover:text-[#7ca832] transition-colors py-2">
-            Aarogya Club
+          <a href="#about-us" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+            About Us
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
-
-          <a href="#" className="hover:text-[#7ca832] transition-colors py-2">
-            Others
+          <a href="#products" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+            Products
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#contact" className="relative py-2 hover:text-[#7ca832] transition-colors duration-300 group">
+            Contact Us
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#7ca832] rounded-full transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
@@ -129,27 +77,6 @@ export const Header: React.FC = () => {
                 />
               </svg>
             </button>
-          </div>
-
-          {/* Action Icons */}
-          <div className="flex items-center gap-3.5 sm:gap-4 shrink-0 text-zinc-800">
-
-            {/* Wishlist */}
-            <button className="relative hover:text-[#7ca832] transition-colors cursor-pointer" aria-label="Wishlist">
-              <svg className="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.8"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-              <span className="absolute -top-1.5 -right-1.5 bg-[#7ca832] text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
-                0
-              </span>
-            </button>
-
-
           </div>
         </div>
       </div>

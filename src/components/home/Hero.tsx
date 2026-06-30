@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="#flavors"
+              href="#products"
               className={`text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5 ${current.accentClass}`}
             >
               <span>Explore Flavors • ₹{current.price}</span>

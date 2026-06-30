@@ -14,7 +14,7 @@ export const FarmStats: React.FC = () => {
     {
       id: 1,
       value: "1,800",
-      desc: "Ghasphus Products reaches 1800 retail stores across 7 countries.",
+      desc: "Super Food Bharat Products reaches 1800 retail stores across 7 countries.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {/* Hands holding growing plant sprout */}
@@ -30,7 +30,7 @@ export const FarmStats: React.FC = () => {
     {
       id: 2,
       value: "560",
-      desc: "Ghasphus conducts 560 Quality tests per day to ensure a quality you can trust.",
+      desc: "Super Food Bharat conducts 560 Quality tests per day to ensure a quality you can trust.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {/* Hand tapping test indicators */}
@@ -46,7 +46,7 @@ export const FarmStats: React.FC = () => {
     {
       id: 3,
       value: "220,280",
-      desc: "Ghasphus proudly celebrates the satisfaction of 220,280 clients due to experienced the exceptional quality and service.",
+      desc: "Super Food Bharat proudly celebrates the satisfaction of 220,280 clients due to experienced the exceptional quality and service.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {/* User profile surrounded by stars */}
@@ -89,11 +89,11 @@ export const FarmStats: React.FC = () => {
 
         <div className="relative z-10 space-y-6 max-w-xl">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-none drop-shadow-lg font-serif">
-            Your Healthy Future <br />
-            Begins Now!
+            Savor the Crunch of <br />
+            Organic Makhana!
           </h2>
           <a
-            href="#flavors"
+            href="#contact"
             className="inline-block bg-[#e8a324] hover:bg-[#c98c19] text-white px-8 py-3.5 rounded-lg text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
           >
             Shop Now

@@ -39,7 +39,7 @@ export const WomenFarmers: React.FC = () => {
 
           <div className="pt-2">
             <a
-              href="#flavors"
+              href="#products"
               className="inline-block bg-[#e8a324] hover:bg-[#c98c19] text-zinc-950 font-black text-xs uppercase px-8 py-3.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
             >
               Know More

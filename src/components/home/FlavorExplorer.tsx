@@ -99,7 +99,7 @@ export const FlavorExplorer: React.FC = () => {
     : PRODUCTS.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="flavors" className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-t border-zinc-100">
+    <section id="products" className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-zinc-50 border-t border-zinc-100">
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

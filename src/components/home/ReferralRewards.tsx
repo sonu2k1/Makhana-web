@@ -10,7 +10,7 @@ export const ReferralRewards: React.FC = () => {
   const generateReferral = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      const code = `GHASPHUS-FRIEND-${Math.random().toString(36).substring(2, 7).toUpperCase()}`;
+      const code = `Super Food Bharat-FRIEND-${Math.random().toString(36).substring(2, 7).toUpperCase()}`;
       setReferralCode(code);
       setCopied(false);
     }
@@ -38,7 +38,7 @@ export const ReferralRewards: React.FC = () => {
             <span className="text-red-600">To your Friends & Family</span>
           </h2>
           <p className="text-sm text-zinc-600 leading-relaxed max-w-xl">
-            Spread the crunch of organic health! Share your unique referral link/code with friends. Once they place their first order, they get a flat 10% discount, and you earn 100 Ghasphus points (worth ₹100) instantly!
+            Spread the crunch of organic health! Share your unique referral link/code with friends. Once they place their first order, they get a flat 10% discount, and you earn 100 Super Food Bharat points (worth ₹100) instantly!
           </p>
 
           {/* Code Generator form */}

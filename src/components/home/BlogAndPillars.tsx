@@ -11,10 +11,9 @@ interface PillarItem {
 
 interface BlogPost {
   id: number;
-  date: string;
   image: string;
   title: string;
-  link: string;
+  description: string;
 }
 
 const PILLARS: PillarItem[] = [
@@ -28,7 +27,7 @@ const PILLARS: PillarItem[] = [
     id: 2,
     bgClass: "bg-[#7a531e]",
     title: "A Culinary Adventure",
-    text: "Elevate your culinary experience with our diverse range of organic food products. Whether you're a seasoned chef or a home cook, Ghasphus brings you flavors that inspire and ingredients that empower your kitchen creations.",
+    text: "Elevate your culinary experience with our diverse range of organic food products. Whether you're a seasoned chef or a home cook, Super Food Bharat brings you flavors that inspire and ingredients that empower your kitchen creations.",
   },
   {
     id: 3,
@@ -40,38 +39,34 @@ const PILLARS: PillarItem[] = [
     id: 4,
     bgClass: "bg-[#4e5d42]",
     title: "Empowering Women Farmers",
-    text: "By choosing Ghasphus, you not only prioritize your well-being but also contribute to the empowerment of Women farmers, fostering a cycle of positivity that resonates from farm to fork.",
+    text: "By choosing Super Food Bharat, you not only prioritize your well-being but also contribute to the empowerment of Women farmers, fostering a cycle of positivity that resonates from farm to fork.",
   },
 ];
 
 const BLOG_POSTS: BlogPost[] = [
   {
     id: 1,
-    date: "06 JUN",
     image: "/images/blog_grains.png",
-    title: "Why Ghasphus is Your Destination for Wholesome Grains",
-    link: "#",
+    title: "Why Roasted Makhana is the Ultimate Healthy Snacking Solution",
+    description: "Discover why roasted makhana (foxnuts) is the perfect guilt-free snack. Packed with plant-based protein, low in calories, and rich in essential minerals, it supports weight loss, heart health, and sustained energy levels throughout the day.",
   },
   {
     id: 2,
-    date: "22 JAN",
-    image: "/images/blog_field.png",
-    title: "Cultivating Change: Ghasphus and the Organic Revolution",
-    link: "#",
+    image: "/images/makhana_mint.png",
+    title: "Traditional Sourcing: Empowering Farms and Sowing Purity",
+    description: "Trace the organic harvesting of makhana seeds from the freshwater ponds of India. Our farmers practice sustainable, traditional harvesting techniques to bring you pure, unadulterated nutrients in every crunchy bite.",
   },
   {
     id: 3,
-    date: "22 JAN",
-    image: "/images/blog_leaf.png",
-    title: "The Organic Advantage: Unveiling the Benefits of Nature",
-    link: "#",
+    image: "/images/makhana_peri.png",
+    title: "Flavored Makhana: A Tasty Way to Boost Your Daily Nutrition",
+    description: "Explore how our flavored makhanas—from spicy peri-peri to refreshing mint—combine delicious taste with high nutrition. Snacking healthy has never been this flavorful, keeping your calorie count in check.",
   },
   {
     id: 4,
-    date: "22 JAN",
-    image: "/images/blog_turmeric.png",
-    title: "The Golden Benefits of Vedic Turmeric",
-    link: "#",
+    image: "/images/makhana_salt.png",
+    title: "Why Makhana is the Perfect Gluten-Free and Low-GI Snacking Choice",
+    description: "Learn about the scientific benefits of makhana for gluten sensitivity and diabetes management. With its low glycemic index and high fiber content, it prevents blood sugar spikes and keeps you full for longer.",
   },
 ];
 
@@ -121,11 +116,6 @@ export const BlogAndPillars: React.FC = () => {
             >
               {/* Blog Media */}
               <div className="relative w-full h-48 overflow-hidden bg-zinc-50 shrink-0 select-none">
-                {/* Date Badge Overlay */}
-                <div className="absolute top-4 left-4 bg-white text-zinc-950 px-3 py-1.5 shadow-md font-black text-center text-[10px] rounded-lg tracking-wider z-10 flex flex-col leading-none border border-zinc-100">
-                  <span className="text-xs font-black">{post.date.split(" ")[0]}</span>
-                  <span className="text-[8px] font-black text-zinc-400 mt-0.5">{post.date.split(" ")[1]}</span>
-                </div>
                 <img
                   src={post.image}
                   alt={post.title}
@@ -134,19 +124,13 @@ export const BlogAndPillars: React.FC = () => {
               </div>
 
               {/* Blog Title Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-4 text-left">
-                <h3 className="text-xs sm:text-sm font-black text-zinc-950 tracking-tight font-sans line-clamp-3 group-hover:text-[#7ca832] transition-colors leading-tight">
+              <div className="p-5 flex-1 flex flex-col justify-start space-y-3 text-left">
+                <h3 className="text-sm font-black text-zinc-950 tracking-tight font-sans group-hover:text-[#7ca832] transition-colors leading-tight">
                   {post.title}
                 </h3>
-                <a
-                  href={post.link}
-                  className="text-[10px] font-black uppercase text-[#7ca832] tracking-widest flex items-center gap-1 hover:underline cursor-pointer pt-2"
-                >
-                  <span>Read Article</span>
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <p className="text-xs text-zinc-500 leading-relaxed font-medium">
+                  {post.description}
+                </p>
               </div>
             </div>
           ))}
