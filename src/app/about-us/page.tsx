@@ -178,6 +178,28 @@ const ECO_PROMISES: EcoPromise[] = [
   }
 ];
 
+interface FarmerSpotlight {
+  name: string;
+  location: string;
+  story: string;
+  icon: string;
+}
+
+const FARMER_SPOTLIGHTS: FarmerSpotlight[] = [
+  {
+    name: "Sarla Devi",
+    location: "Madhubani Co-op Leader",
+    story: "Harvesting lotus seeds was historically a highly volatile trade dominated by local middle-men. Since partnering directly with Super Food Bharat, our cooperative has earned 35% higher profits. This financial stability has empowered 45 women in my village to send their daughters to school and invest in household clean energy.",
+    icon: "👩‍🌾"
+  },
+  {
+    name: "Ramesh Mandal",
+    location: "Lotus Harvest Veteran",
+    story: "Diving for seeds in the muddy wetlands is exhausting. By working directly with Super Food Bharat's organic guidelines, we stopped using chemical fertilizers. The wetlands are cleaner, the raw seeds are healthier, and we can hand over a sustainable agricultural environment to our children.",
+    icon: "👨‍🌾"
+  }
+];
+
 export default function AboutUsPage() {
   const [activeMilestone, setActiveMilestone] = useState<number>(0);
 
@@ -250,7 +272,68 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Sourcing Process Section (New Educational Component) */}
+          {/* Section: Vedic Roots & History of Lotus Seeds (New Heritage Component) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#fafbfa] rounded-3xl p-8 lg:p-12 border border-zinc-100">
+            {/* Left: Emojis/Graphics */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 overflow-hidden rounded-[50%_50%_40%_60%_/_60%_40%_60%_40%] border-4 border-[#e8a324]/20 shadow-xl bg-gradient-to-tr from-[#faf8f5] to-amber-50 flex flex-col items-center justify-center p-8 select-none">
+                <span className="text-8xl filter drop-shadow-md">🪷</span>
+                <div className="text-center mt-6 space-y-1">
+                  <span className="block text-[10px] font-black uppercase text-amber-700 tracking-widest">Kamal Gatta</span>
+                  <p className="text-[11px] text-zinc-500 font-medium max-w-[200px] leading-relaxed">
+                    Sanskrit name for lotus seeds, revered in traditional Ayurvedic wellness systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="space-y-3">
+                <span className="block text-xs font-black tracking-widest text-[#e8a324] uppercase font-sans">
+                  Ayurvedic & Vedic Heritage
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight font-serif">
+                  Vedic Roots & Healing Heritage
+                </h2>
+                <div className="w-20 h-0.5 bg-[#e8a324] opacity-80 mt-4"></div>
+              </div>
+
+              <div className="space-y-5 text-sm text-zinc-600 leading-relaxed font-medium">
+                <p>
+                  Known in ancient Sanskrit texts as <em>Kamal Gatta</em>, lotus seeds have been revered in India for over 3,000 years. Mentioned in the sacred Atharvaveda and utilized extensively in traditional Ayurvedic systems, lotus seeds were recognized for their unique cooling properties, life-force energy (<em>Prana</em>), and ability to calm the nervous system.
+                </p>
+                <p>
+                  Historically, these seeds were consumed during fasting (<em>Vrats</em>) due to their low-glycemic, high-satiety profile, providing long-lasting stamina. At Super Food Bharat, we are proud to revive this ancient healing heritage, combining centuries-old convection clay-pot popping techniques with modern nutritional protocols.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section: Community Impact Statistics (New Statistics Counter) */}
+          <div className="bg-[#3b592d] text-white rounded-3xl p-8 lg:p-12 text-center select-none overflow-hidden relative">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(124,168,50,0.15),transparent_50%)]"></div>
+            
+            <div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { number: "500+", label: "Women Farmers Empowered" },
+                { number: "1,200+", label: "Hectares of Wetlands Revived" },
+                { number: "100k+", label: "Health-Conscious Homes Served" },
+                { number: "0%", label: "Chemicals & Preservatives" }
+              ].map((stat) => (
+                <div key={stat.label} className="space-y-1">
+                  <div className="text-4xl lg:text-5xl font-black font-serif tracking-tight text-[#7ca832]">
+                    {stat.number}
+                  </div>
+                  <div className="text-[10px] lg:text-xs font-black uppercase tracking-widest text-zinc-200/80">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Sourcing Process Section */}
           <div className="space-y-10">
             <div className="text-center space-y-3 max-w-md mx-auto">
               <span className="block text-xs font-black tracking-widest text-[#7ca832] uppercase font-sans">
@@ -322,6 +405,41 @@ export default function AboutUsPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Section: Farmer Spotlight Cooperative Stories (New Impact Stories Component) */}
+          <div className="space-y-10">
+            <div className="text-center space-y-3 max-w-md mx-auto">
+              <span className="block text-xs font-black tracking-widest text-[#7ca832] uppercase font-sans">
+                Real Stories, Real Impact
+              </span>
+              <h2 className="text-3xl font-black text-zinc-950 font-serif tracking-tight">
+                Farmer Co-op Spotlight
+              </h2>
+              <div className="w-16 h-0.5 bg-[#7ca832] mx-auto opacity-80"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+              {FARMER_SPOTLIGHTS.map((farmer) => (
+                <div
+                  key={farmer.name}
+                  className="bg-white border border-zinc-100 rounded-3xl p-8 space-y-4 shadow-xs hover:shadow-md transition-shadow relative overflow-hidden"
+                >
+                  <span className="text-4xl select-none block">{farmer.icon}</span>
+                  <div className="space-y-0.5">
+                    <h3 className="text-base font-black text-zinc-950 uppercase tracking-tight">
+                      {farmer.name}
+                    </h3>
+                    <span className="text-[10px] font-bold text-[#7ca832] uppercase tracking-wider block">
+                      {farmer.location}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-500 leading-relaxed font-medium">
+                    "{farmer.story}"
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -429,7 +547,43 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Environmental Promise Section (New Eco/Sustainability Component) */}
+          {/* Section: Founder's Note (New Executive Letter Component) */}
+          <div className="bg-white border border-zinc-100 rounded-3xl p-8 lg:p-12 space-y-6 text-left max-w-4xl mx-auto shadow-sm relative">
+            <div className="absolute top-8 right-12 text-7xl font-serif text-zinc-100/60 select-none font-black leading-none">
+              “
+            </div>
+            
+            <div className="space-y-2">
+              <span className="block text-xs font-black tracking-widest text-[#3b592d] uppercase font-sans">
+                Letter from the Founders
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-zinc-950 font-serif tracking-tight">
+                A Mission of Wholesome Revival
+              </h2>
+              <div className="w-12 h-0.5 bg-[#3b592d] opacity-80"></div>
+            </div>
+
+            <div className="space-y-4 text-xs sm:text-sm text-zinc-600 leading-relaxed font-medium font-sans">
+              <p>
+                Dear Health-Conscious Friend,
+              </p>
+              <p>
+                We founded Super Food Bharat because we saw a growing divide: modern, high-speed snack products were separating us from the heritage grains and natural superfoods that sustained our ancestors for centuries. Processed potato chips and high-sodium popped snacks have dominated our pantry shelves at the cost of long-term health.
+              </p>
+              <p>
+                Our journey took us directly to the pristine pond wetlands of Bihar and Dehradun. By establishing direct-purchase contracts with women-led farmer self-help groups, we wanted to ensure that the farmers who harvest the seeds earn fair wages. Simultaneously, by keeping our flavorings free from artificial chemicals, preservatives, or toxic MSG, we set out to prove that eating clean does not mean sacrificing taste.
+              </p>
+              <p>
+                Thank you for supporting sustainable wetland agriculture and choosing a cleaner path to daily energy. We hope you enjoy the crunch of our slow-roasted seeds as much as we enjoyed harvesting them.
+              </p>
+              <p className="pt-2 font-black text-zinc-900 font-serif">
+                Aarav Sharma & Dr. Meera Iyer <br />
+                <span className="text-[10px] text-[#7ca832] uppercase tracking-wider font-sans font-bold">Co-Founders, Super Food Bharat</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Environmental Promise Section */}
           <div className="bg-[#f0f4ef] border border-zinc-200/50 rounded-3xl p-8 lg:p-12 space-y-8">
             <div className="text-center space-y-3 max-w-md mx-auto">
               <span className="block text-xs font-black tracking-widest text-[#3b592d] uppercase font-sans">
