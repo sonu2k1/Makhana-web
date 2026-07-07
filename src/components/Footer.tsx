@@ -10,9 +10,14 @@ export const Footer: React.FC = () => {
         {/* Column 1: Brand Info (8 cols) */}
         <div className="lg:col-span-8 space-y-5 text-left">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#e8a324] flex items-center justify-center text-white font-extrabold text-xl shadow-xs border border-yellow-600">
-              G
+          <div className="flex items-center gap-3 group cursor-pointer">
+            <div className="relative flex items-center justify-center shrink-0">
+              {/* Outer decorative glowing ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#d97706] to-[#f59e0b] opacity-40 blur-[2px] group-hover:scale-110 transition-transform duration-500"></div>
+              {/* Inner badge */}
+              <div className="relative w-12 h-12 rounded-full flex items-center justify-center group-hover:rotate-6 transition-all duration-500">
+                <img src="/vercel.svg" alt="Super Food Bharat Logo" className="w-full h-full drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.15)]" />
+              </div>
             </div>
             <div className="flex flex-col">
               <span className="text-[#3b592d] font-black text-2xl tracking-tight leading-none uppercase">

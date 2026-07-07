@@ -1,1 +1,35 @@
-<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 1000"><path d="m577.3 0 577.4 1000H0z" fill="#fff"/></svg>
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer decorative glowing ring / background circle -->
+  <circle cx="50" cy="50" r="46" fill="url(#bgGrad)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Puffy seed body -->
+  <path d="M50 20 C62 17, 78 23, 82 35 C86 47, 82 63, 75 73 C68 83, 55 91, 45 87 C35 83, 20 75, 18 63 C16 51, 20 37, 30 27 C40 17, 38 23, 50 20 Z" fill="url(#makhanaGrad)"/>
+  
+  <!-- Organic puff segments (shading) -->
+  <path d="M42 33 C48 37, 56 37, 62 32" stroke="#ebdcb9" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M30 53 C35 55, 48 53, 52 45" stroke="#ebdcb9" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M58 63 C52 69, 38 71, 30 65" stroke="#ebdcb9" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M68 47 C72 52, 70 65, 62 69" stroke="#ebdcb9" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Golden roasted seed coat specks/cracks -->
+  <path d="M48 23 C51 27, 53 33, 47 37" stroke="#8b5a16" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M50 20 C52 15, 48 13, 45 15" stroke="#8b5a16" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M45 87 C42 90, 40 93, 42 95" stroke="#8b5a16" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Inner core speck -->
+  <circle cx="52" cy="55" r="3.5" fill="#8b5a16" opacity="0.8"/>
+  <path d="M52 55 C48 57, 44 55, 42 51" stroke="#8b5a16" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="makhanaGrad" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#faf7f0"/>
+      <stop offset="100%" stop-color="#ebdcb9"/>
+    </linearGradient>
+  </defs>
+</svg>

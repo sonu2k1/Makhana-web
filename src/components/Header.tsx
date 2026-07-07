@@ -52,9 +52,14 @@ export const Header: React.FC = () => {
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4">
         {/* Logo */}
-        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#e8a324] flex items-center justify-center text-white font-extrabold text-base sm:text-lg shadow-sm border border-yellow-600">
-            G
+        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0 group">
+          <div className="relative flex items-center justify-center shrink-0">
+            {/* Outer decorative glowing ring */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#d97706] to-[#f59e0b] opacity-40 blur-[2px] group-hover:scale-110 transition-transform duration-500"></div>
+            {/* Inner badge */}
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center group-hover:rotate-6 transition-all duration-500">
+              <img src="/vercel.svg" alt="Super Food Bharat Logo" className="w-full h-full drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.15)]" />
+            </div>
           </div>
           <div className="flex flex-col">
             <span className="text-[#3b592d] font-black text-sm sm:text-lg md:text-xl tracking-tight leading-none uppercase whitespace-nowrap">
