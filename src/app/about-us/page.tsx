@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MakhanaJourney } from "@/components/about/MakhanaJourney";
 
 interface PillarItem {
   id: number;
@@ -509,6 +510,9 @@ export default function AboutUsPage() {
               </div>
             </div>
           </div>
+
+          {/* Section: The Journey of Makhana */}
+          <MakhanaJourney />
 
           {/* Section: Meet the Team */}
           <div className="space-y-10">
