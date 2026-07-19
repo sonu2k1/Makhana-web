@@ -32,37 +32,7 @@ const FAQS: FAQItem[] = [
   }
 ];
 
-interface Branch {
-  name: string;
-  purpose: string;
-  address: string;
-  phone: string;
-  icon: string;
-}
 
-const BRANCHES: Branch[] = [
-  {
-    name: "Corporate Headquarters",
-    purpose: "Management & Sales Support Desk",
-    address: "Super Food Bharat Herbs, Plot No-1, Biharigarh, Dehradun, Uttarakhand - 248001",
-    phone: "sales@superfoodbharat.in",
-    icon: "🏢"
-  },
-  {
-    name: "Wetland Sourcing Office",
-    purpose: "Farmer Relations & Crop Procurement",
-    address: "Cooperative Sourcing Station, Ward No-12, Madhubani Town, Bihar - 847211",
-    phone: "+91 6200 456 789",
-    icon: "🌾"
-  },
-  {
-    name: "North Logistics Center",
-    purpose: "B2B Warehousing & Express Shipping",
-    address: "Khajuri Khas Industrial Area, Phase-I, New Delhi - 110094",
-    phone: "+91 11 2345 6789",
-    icon: "📦"
-  }
-];
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -303,47 +273,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Regional Branch Directory Section (New Content Component) */}
-          <div className="space-y-10">
-            <div className="text-center space-y-3 max-w-md mx-auto">
-              <span className="block text-xs font-black tracking-widest text-[#7ca832] uppercase font-sans">
-                Branch Directory
-              </span>
-              <h2 className="text-3xl font-black text-zinc-950 font-serif tracking-tight">
-                Our Office Locations
-              </h2>
-              <p className="text-xs text-zinc-500 font-medium">
-                Visit or get in touch with our specific operations, sourcing, or logistics branches.
-              </p>
-              <div className="w-16 h-0.5 bg-[#7ca832] mx-auto opacity-80"></div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {BRANCHES.map((branch) => (
-                <div
-                  key={branch.name}
-                  className="bg-white border border-zinc-100 rounded-3xl p-6 flex flex-col justify-between hover:shadow-md transition-shadow text-left space-y-4"
-                >
-                  <div className="space-y-2">
-                    <span className="text-3xl select-none block">{branch.icon}</span>
-                    <h3 className="text-sm font-black text-zinc-950 uppercase tracking-tight font-serif">
-                      {branch.name}
-                    </h3>
-                    <span className="text-[10px] font-bold text-[#7ca832] uppercase tracking-wider block">
-                      {branch.purpose}
-                    </span>
-                    <p className="text-xs text-zinc-500 leading-relaxed font-medium">
-                      {branch.address}
-                    </p>
-                  </div>
-                  <div className="pt-2 border-t border-zinc-100 flex items-center justify-between text-[11px] font-bold text-zinc-700">
-                    <span>Phone:</span>
-                    <span>{branch.phone}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
           {/* Sourcing & Connection Map Section */}
           <div className="bg-white border border-zinc-100 rounded-3xl p-8 lg:p-12 space-y-8">
