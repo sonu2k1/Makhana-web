@@ -28,7 +28,7 @@ const FAQS: FAQItem[] = [
   },
   {
     question: "What are your shipping rates and delivery schedules?",
-    answer: "We offer free shipping on all domestic orders above ₹499. Orders below ₹499 incur a flat ₹50 shipping charge. Standard delivery takes 3-5 business days depending on your location. Dispatch happens within 24 hours of order confirmation."
+    answer: "We offer free shipping on all domestic orders across Bharat. Standard delivery takes 3-5 business days depending on your location. Dispatch happens within 24 hours of order confirmation."
   }
 ];
 

@@ -6,6 +6,7 @@ import { FarmPhilosophy } from "@/components/home/FarmPhilosophy";
 import { FarmVideo } from "@/components/home/FarmVideo";
 import { WomenFarmers } from "@/components/home/WomenFarmers";
 import { FarmToFork } from "@/components/home/FarmToFork";
+import { MakhanaOfferings } from "@/components/home/MakhanaOfferings";
 import { FlavorExplorer } from "@/components/home/FlavorExplorer";
 import { MakhanaMagic } from "@/components/home/MakhanaMagic";
 import { FarmStats } from "@/components/home/FarmStats";
@@ -37,6 +38,9 @@ export default function Home() {
 
         {/* Farm to fork supply chain visual */}
         <FarmToFork />
+
+        {/* Core Makhana categories: Raw, Roasted & Flavored */}
+        <MakhanaOfferings />
 
         {/* Interactive flavor catalog & shop */}
         <FlavorExplorer />

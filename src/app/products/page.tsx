@@ -20,8 +20,8 @@ interface Product {
 const PRODUCTS: Product[] = [
   {
     id: "makhana-salt",
-    name: "Mukta Roasted Makhana",
-    flavor: "Himalayan Pink Salt",
+    name: "Superfoods Bharat Roasted Makhana",
+    flavor: "Himalayan Pink Salt & Pepper",
     price: 180,
     image: "/images/makhana_salt.png",
     category: "salted",
@@ -32,7 +32,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "makhana-peri",
-    name: "Revel Roasted Makhana",
+    name: "Superfoods Bharat Roasted Makhana",
     flavor: "Spicy Peri Peri",
     price: 195,
     image: "/images/makhana_peri.png",
@@ -44,22 +44,22 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "makhana-mint",
-    name: "Aura Premium Lotus Seeds",
-    flavor: "Mint Magic (Pudina)",
+    name: "Superfoods Bharat Premium Makhana",
+    flavor: "Mint & Herb Magic",
     price: 190,
     image: "/images/makhana_mint.png",
     category: "herbs",
     calories: 82,
-    weight: "250g",
+    weight: "100g",
     description: "A cooling summer recipe that combines real dried mint leaves with black salt, cumin seeds, and a dash of sour dry mango powder. Light, refreshing, and deeply satisfying.",
     ingredients: ["Lotus Seeds (Makhana)", "Cold Pressed Rice Bran Oil", "Mint Leaf Powder", "Black Salt", "Dry Mango (Amchur)", "Roasted Cumin Powder"],
   },
   {
     id: "makhana-cheese",
-    name: "Aura Cheddar Makhana",
+    name: "Superfoods Bharat Gourmet Makhana",
     flavor: "Classic Cheddar Cheese",
     price: 210,
-    image: "/images/makhana_mint.png",
+    image: "/images/makhana_cheese.png",
     category: "salted",
     calories: 90,
     weight: "100g",
@@ -67,27 +67,27 @@ const PRODUCTS: Product[] = [
     ingredients: ["Lotus Seeds (Makhana)", "Olive Oil", "Cheese Powder", "Whey Powder", "Salt", "Natural Coloring (Beta Carotene)"],
   },
   {
-    id: "makhana-sourcream",
-    name: "Mukta Herb Makhana",
-    flavor: "Sour Cream & Onion",
-    price: 199,
-    image: "/images/makhana_salt.png",
+    id: "vedic-turmeric",
+    name: "Superfoods Bharat Organic Spice",
+    flavor: "Organic Vedic Turmeric Powder",
+    price: 249,
+    image: "/images/vedic_turmeric.png",
     category: "herbs",
-    calories: 88,
-    weight: "100g",
-    description: "A perfect blend of sweet spring onions and tangy sour cream seasoning. Creamy taste with a light, airy crunch that keeps you coming back for more.",
-    ingredients: ["Lotus Seeds (Makhana)", "Olive Oil", "Sour Cream Powder", "Dehydrated Chives", "Onion Powder", "Yeast Extract"],
+    calories: 15,
+    weight: "200g",
+    description: "Directly sourced high-curcumin organic turmeric powder from the Himalayan foothills. Fresh, pure, anti-inflammatory, and rich in natural antioxidants.",
+    ingredients: ["100% Pure Organic Turmeric Root (Curcuma Longa)"],
   },
   {
-    id: "makhana-caramel",
-    name: "Revel Sweet Makhana",
-    flavor: "Sweet Caramel Crunch",
+    id: "makhana-sweet-caramel",
+    name: "Superfoods Bharat Sweet Makhana",
+    flavor: "Jaggery & Caramel Crunch",
     price: 220,
-    image: "/images/makhana_peri.png",
+    image: "/images/makhana_cheese.png",
     category: "sweet",
     calories: 98,
     weight: "120g",
-    description: "Coated with organic liquid jaggery (Gud) and real vanilla extract. A sweet tooth fix that packs zero processed sugar, making it the perfect post-workout treat.",
+    description: "Coated with organic liquid jaggery (Gud) and real vanilla extract. A sweet tooth fix that packs zero processed sugar, making it the perfect healthy treat.",
     ingredients: ["Lotus Seeds (Makhana)", "Organic Jaggery (Gur)", "Clarified Butter (Ghee)", "Fleur de Sel", "Vanilla Extract"],
   },
 ];
@@ -332,8 +332,8 @@ export default function ProductsPage() {
 
                     <div className="flex items-center justify-between pt-2 border-t border-zinc-100 mt-2">
                       <div className="flex flex-col">
-                        <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">Price</span>
-                        <span className="text-lg font-black text-zinc-950">₹{product.price}</span>
+                        <span className="text-[9px] font-bold text-emerald-800 uppercase tracking-wider">Superfood</span>
+                        <span className="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/50">100% Organic</span>
                       </div>
 
                       <button
@@ -608,7 +608,7 @@ export default function ProductsPage() {
                     <h3 className="text-xl font-black text-zinc-950 uppercase tracking-tight leading-tight">
                       {quickViewProduct.name}
                     </h3>
-                    <div className="text-2xl font-black text-[#3b592d]">₹{quickViewProduct.price}</div>
+                    <div className="text-xs font-extrabold text-emerald-800 bg-emerald-100/70 inline-block px-3 py-1 rounded-full border border-emerald-200">100% Organic Superfood</div>
                   </div>
 
                   <p className="text-xs text-zinc-500 leading-relaxed">
