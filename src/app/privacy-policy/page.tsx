@@ -183,7 +183,7 @@ export default function PrivacyPolicyPage() {
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium border-t border-emerald-500/20">
               <div>
                 <span className="block text-amber-300 font-bold mb-1">✉️ Email Support</span>
-                <span>privacy@superfoodbharat.in</span>
+                <span>bd@leiwenpharmaura.com</span>
               </div>
               <div>
                 <span className="block text-amber-300 font-bold mb-1">📍 Farm Office</span>

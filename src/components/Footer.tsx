@@ -156,8 +156,16 @@ export const Footer: React.FC = () => {
                 <span>Super Food Bharat Farm, Plot No -1, Biharigarh, Dehradun, Uttarakhand</span>
               </div>
               <div className="flex items-center gap-2.5">
+                <span className="text-amber-400 text-sm shrink-0">💬</span>
+                <a href="https://wa.me/918527167311" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+                  WhatsApp: +91-8527167311
+                </a>
+              </div>
+              <div className="flex items-center gap-2.5">
                 <span className="text-amber-400 text-sm shrink-0">✉️</span>
-                <span>sales@superfoodbharat.in</span>
+                <a href="mailto:bd@leiwenpharmaura.com" className="hover:text-amber-300 transition-colors">
+                  bd@leiwenpharmaura.com
+                </a>
               </div>
             </div>
 

@@ -116,13 +116,27 @@ export default function ContactPage() {
 
                 {/* Communication channels Card */}
                 <div className="bg-white rounded-2xl border border-zinc-100 p-6 space-y-5 hover:shadow-md transition-all duration-300">
+                  {/* WhatsApp Phone */}
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl mt-0.5">💬</span>
+                    <div className="space-y-1">
+                      <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Phone / WhatsApp</h4>
+                      <p className="text-xs text-[#7ca832] font-semibold hover:underline">
+                        <a href="https://wa.me/918527167311" target="_blank" rel="noopener noreferrer">+91-8527167311</a>
+                      </p>
+                      <p className="text-[10px] text-zinc-400">Available on WhatsApp & Direct Calls</p>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-zinc-100/80"></div>
+
                   {/* Email */}
                   <div className="flex items-start gap-4">
                     <span className="text-2xl mt-0.5">✉️</span>
                     <div className="space-y-1">
                       <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Email Inquiry</h4>
                       <p className="text-xs text-[#7ca832] font-semibold hover:underline">
-                        <a href="mailto:sales@suoperfoodbharat.in">sales@suoperfoodbharat.in</a>
+                        <a href="mailto:bd@leiwenpharmaura.com">bd@leiwenpharmaura.com</a>
                       </p>
                       <p className="text-[10px] text-zinc-400">Response time: Within 24 business hours</p>
                     </div>
@@ -133,15 +147,15 @@ export default function ContactPage() {
                 <div className="bg-[#7ca832]/5 rounded-2xl border border-[#7ca832]/10 p-6 space-y-3.5">
                   <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Order Instantly on WhatsApp</h4>
                   <p className="text-xs text-zinc-500 leading-relaxed">
-                    Have a quick question or want to place a distribution request? Click below to start chatting with our B2B desk directly on WhatsApp.
+                    Have a quick question or want to place a distribution request? Click below to start chatting with our desk directly on WhatsApp (+91-8527167311).
                   </p>
                   <a
-                    href="https://wa.me/9118001234555"
+                    href="https://wa.me/918527167311"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#25d366] hover:bg-[#1ebd56] text-white font-bold text-xs uppercase px-6 py-3 rounded-xl shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer mt-1"
                   >
-                    <span>Chat on WhatsApp</span>
+                    <span>Chat on WhatsApp (+91-8527167311)</span>
                   </a>
                 </div>
               </div>

@@ -3,7 +3,7 @@
 import React from "react";
 
 export const WhatsAppWidget: React.FC = () => {
-  const whatsappNumber = "911800123455"; // Superfoods Bharat WhatsApp Contact Number
+  const whatsappNumber = "918527167311"; // Superfoods Bharat WhatsApp Contact Number
   const defaultMessage = encodeURIComponent(
     "Hello Superfoods Bharat! I am visiting your website and have an inquiry about your organic Makhana products."
   );

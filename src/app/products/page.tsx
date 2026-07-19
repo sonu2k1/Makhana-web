@@ -554,7 +554,7 @@ export default function ProductsPage() {
                 Bulk Inquiry Form
               </a>
               <a
-                href="https://wa.me/9118001234555"
+                href="https://wa.me/918527167311"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25d366] hover:bg-[#1ebd56] text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl shadow-md text-center transition-all cursor-pointer flex items-center justify-center gap-2 hover:-translate-y-0.5"
