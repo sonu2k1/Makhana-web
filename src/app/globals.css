@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -7,26 +6,21 @@
   --primary: #15803d;
   --secondary: #eab308;
   --accent: #f97316;
-  --font-mochiy: 'Mochiy Pop One', cursive, sans-serif;
-}
-
-* {
-  font-family: 'Mochiy Pop One', var(--font-mochiy), cursive, sans-serif !important;
-}
-
-body, html, h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, div {
-  font-family: 'Mochiy Pop One', var(--font-mochiy), cursive, sans-serif !important;
-}
-
-.font-serif, .font-sans, .font-mono {
-  font-family: 'Mochiy Pop One', var(--font-mochiy), cursive, sans-serif !important;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Mochiy Pop One', var(--font-mochiy), cursive, sans-serif !important;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Base custom scrollbar */

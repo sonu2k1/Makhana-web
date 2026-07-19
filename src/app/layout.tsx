@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Mochiy_Pop_One } from "next/font/google";
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 import { CookieConsent } from "@/components/CookieConsent";
 import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 
-const mochiyPopOne = Mochiy_Pop_One({
-  weight: "400",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-mochiy",
+  variable: "--font-sans",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -28,13 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${mochiyPopOne.variable} h-full scroll-smooth antialiased`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet" />
-      </head>
-      <body className={`${mochiyPopOne.className} min-h-full flex flex-col bg-[#faf8f5]`}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${playfairDisplay.variable} h-full scroll-smooth antialiased`}>
+      <body className={`${plusJakartaSans.className} min-h-full flex flex-col bg-[#faf8f5]`}>
         {children}
         <CookieConsent />
         <WhatsAppWidget />
