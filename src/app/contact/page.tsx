@@ -45,7 +45,7 @@ const BRANCHES: Branch[] = [
     name: "Corporate Headquarters",
     purpose: "Management & Sales Support Desk",
     address: "Super Food Bharat Herbs, Plot No-1, Biharigarh, Dehradun, Uttarakhand - 248001",
-    phone: "1800 1234 55555",
+    phone: "sales@superfoodbharat.in",
     icon: "🏢"
   },
   {
@@ -146,18 +146,6 @@ export default function ContactPage() {
 
                 {/* Communication channels Card */}
                 <div className="bg-white rounded-2xl border border-zinc-100 p-6 space-y-5 hover:shadow-md transition-all duration-300">
-                  {/* Phone */}
-                  <div className="flex items-start gap-4">
-                    <span className="text-2xl mt-0.5">📞</span>
-                    <div className="space-y-1">
-                      <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Call Toll-Free</h4>
-                      <p className="text-xs text-zinc-500">1800 1234 55555</p>
-                      <p className="text-[10px] text-zinc-400">Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                    </div>
-                  </div>
-
-                  <div className="border-t border-zinc-100/80"></div>
-
                   {/* Email */}
                   <div className="flex items-start gap-4">
                     <span className="text-2xl mt-0.5">✉️</span>

@@ -205,8 +205,7 @@ export const Header: React.FC = () => {
 
           {/* Support Strip */}
           <div className="pt-4 border-t border-emerald-900/10 flex flex-col gap-3 text-[10px] tracking-wider text-emerald-900/70 font-extrabold uppercase px-2">
-            <div className="flex items-center justify-between">
-              <span>Customer Care: 1800 1234 5555</span>
+            <div className="flex items-center justify-center">
               <span>Made in Bharat 🇮🇳</span>
             </div>
           </div>
