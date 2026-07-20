@@ -127,9 +127,9 @@ export default function ContactPage() {
                   <div className="flex items-start gap-4">
                     <span className="text-2xl mt-0.5">📍</span>
                     <div className="space-y-1">
-                      <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Our Farm Sourcing</h4>
+                      <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Corporate Office Address</h4>
                       <p className="text-xs text-zinc-500 leading-relaxed">
-                        Super Food Bharat Farm, Plot No -1, Biharigarh, Dehradun, Uttarakhand
+                        H83V+F46, Village Chhalera &amp; Sadarpur, Sadarpur, Sector 44, Noida, Uttar Pradesh 201303
                       </p>
                     </div>
                   </div>

@@ -153,7 +153,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-xs text-emerald-100/80 font-medium">
               <div className="flex items-start gap-2.5">
                 <span className="text-amber-400 text-sm shrink-0">📍</span>
-                <span>Super Food Bharat Farm, Plot No -1, Biharigarh, Dehradun, Uttarakhand</span>
+                <span>H83V+F46, Village Chhalera &amp; Sadarpur, Sadarpur, Sector 44, Noida, Uttar Pradesh 201303</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="text-amber-400 text-sm shrink-0">💬</span>

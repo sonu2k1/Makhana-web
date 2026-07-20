@@ -204,8 +204,8 @@ export default function PrivacyPolicyPage() {
                 <span>bd@leiwenpharmaura.com</span>
               </div>
               <div>
-                <span className="block text-amber-300 font-bold mb-1">📍 Farm Office</span>
-                <span>Biharigarh, Dehradun, Uttarakhand</span>
+                <span className="block text-amber-300 font-bold mb-1">📍 Corporate Office</span>
+                <span>Sector 44, Noida, Uttar Pradesh 201303</span>
               </div>
             </div>
           </div>
