@@ -15,25 +15,20 @@ export const EntryPopupModal: React.FC = () => {
   });
 
   useEffect(() => {
-    // Open modal automatically 1 second after user lands on the website
-    const hasSeenPopup = sessionStorage.getItem("superfood_popup_seen");
-    if (!hasSeenPopup) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
+    // Open modal automatically every time user lands on / opens the site
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("superfood_popup_seen", "true");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    sessionStorage.setItem("superfood_popup_seen", "true");
   };
 
   if (!isOpen) return null;
