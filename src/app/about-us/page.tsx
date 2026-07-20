@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 import { MakhanaJourney } from "@/components/about/MakhanaJourney";
 
 interface PillarItem {
@@ -210,21 +211,41 @@ export default function AboutUsPage() {
       <Header />
 
       <main className="flex-1 bg-[#faf8f5]">
-        {/* Banner Section */}
-        <div className="w-full bg-[#3b592d] text-white py-20 px-4 text-center relative overflow-hidden select-none">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,168,50,0.15),transparent_50%)]"></div>
-          <div className="max-w-4xl mx-auto relative z-10 space-y-4">
-            <span className="text-[10px] font-black tracking-widest text-[#7ca832] uppercase bg-[#7ca832]/10 px-3 py-1 rounded-full border border-[#7ca832]/25">
-              Our Philosophy & Mission
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-black font-serif tracking-tight">
-              About Super Food Bharat
-            </h1>
-            <p className="text-xs sm:text-sm text-zinc-200/90 max-w-xl mx-auto leading-relaxed font-medium">
-              We want to be the change agent in our community by persuading people that living a healthier lifestyle is simple, tasty, and sustainable.
-            </p>
-          </div>
-        </div>
+        {/* Page Hero Section matching Home Hero size */}
+        <PageHero
+          badgeText="🌱 100% Organic Superfood • Our Philosophy & Mission"
+          badgeBgClass="bg-[#7ca832]/15 text-[#2D5A27] border-[#7ca832]/30"
+          bgClass="bg-gradient-to-br from-[#F4F9F1] via-[#EBF3E6] to-[#E2EEDC]"
+          textAccentClass="text-[#2D5A27]"
+          titleLine1="About Super Food Bharat,"
+          titleHighlight="Rooted in Purity"
+          description="We want to be the change agent in our community by persuading people that living a healthier lifestyle is simple, tasty, and sustainable."
+          stats={[
+            { value: "500+", label: "Women Farmers" },
+            { value: "100%", label: "Traceable" },
+            { value: "0%", label: "Chemicals" },
+          ]}
+          buttonText="Explore Our Story"
+          buttonHref="#our-story"
+          buttonClass="bg-[#7ca832] hover:bg-[#688a29] text-white"
+          rightGraphic={
+            <>
+              <div className="absolute top-4 right-2 sm:right-6 bg-white/90 backdrop-blur-md border border-white/60 shadow-lg px-3.5 py-1.5 rounded-full text-xs font-black text-emerald-900 z-20 flex items-center gap-1.5 animate-bounce-slow">
+                <span>🌿 100% Organic</span>
+              </div>
+              <div className="absolute bottom-10 left-2 sm:left-6 bg-white/90 backdrop-blur-md border border-white/60 shadow-lg px-3.5 py-1.5 rounded-full text-xs font-black text-amber-900 z-20 flex items-center gap-1.5 animate-bounce-slow">
+                <span>🌾 Direct Sourced</span>
+              </div>
+              <div className="relative w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96">
+                <img
+                  src="/images/farm_to_fork_team.png"
+                  alt="About Super Food Bharat"
+                  className="w-full h-full object-cover rounded-3xl drop-shadow-2xl hover:scale-105 transition-transform duration-500 border-4 border-white/60"
+                />
+              </div>
+            </>
+          }
+        />
 
         {/* Content Body */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">

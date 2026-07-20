@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 
 interface FAQItem {
   question: string;
@@ -60,21 +61,41 @@ export default function ContactPage() {
       <Header />
 
       <main className="flex-1 bg-[#faf8f5]">
-        {/* Banner Section */}
-        <div className="w-full bg-[#3b592d] text-white py-20 px-4 text-center relative overflow-hidden select-none">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,168,50,0.15),transparent_50%)]"></div>
-          <div className="max-w-4xl mx-auto relative z-10 space-y-4">
-            <span className="text-[10px] font-black tracking-widest text-[#7ca832] uppercase bg-[#7ca832]/10 px-3 py-1 rounded-full border border-[#7ca832]/25">
-              Get in touch
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-black font-serif tracking-tight">
-              Contact Us
-            </h1>
-            <p className="text-xs sm:text-sm text-zinc-200/90 max-w-xl mx-auto leading-relaxed font-medium">
-              Have questions about our organic Makhanas, bulk ordering, or farm sourcing? Send us a message and we'll get back to you shortly.
-            </p>
-          </div>
-        </div>
+        {/* Page Hero Section matching Home Hero size */}
+        <PageHero
+          badgeText="💬 Direct Support • 24/7 Response Desk"
+          badgeBgClass="bg-[#0d9488]/15 text-[#115e59] border-[#0d9488]/30"
+          bgClass="bg-gradient-to-br from-[#F2FBF9] via-[#E4F5F1] to-[#D5EFE9]"
+          textAccentClass="text-[#0d9488]"
+          titleLine1="Contact Us &"
+          titleHighlight="Partner With Us"
+          description="Have questions about our organic Makhanas, bulk ordering, or farm sourcing? Send us a message and we'll get back to you shortly."
+          stats={[
+            { value: "24h SLA", label: "Fast Reply" },
+            { value: "WhatsApp", label: "Instant Chat" },
+            { value: "B2B / Export", label: "Bulk Partner" },
+          ]}
+          buttonText="Send Us A Message"
+          buttonHref="#contact-form"
+          buttonClass="bg-[#0d9488] hover:bg-[#0f766e] text-white"
+          rightGraphic={
+            <>
+              <div className="absolute top-4 right-2 sm:right-6 bg-white/90 backdrop-blur-md border border-white/60 shadow-lg px-3.5 py-1.5 rounded-full text-xs font-black text-teal-900 z-20 flex items-center gap-1.5 animate-bounce-slow">
+                <span>📍 Uttarakhand & Bihar</span>
+              </div>
+              <div className="absolute bottom-10 left-2 sm:left-6 bg-white/90 backdrop-blur-md border border-white/60 shadow-lg px-3.5 py-1.5 rounded-full text-xs font-black text-[#1ebd56] z-20 flex items-center gap-1.5 animate-bounce-slow">
+                <span>💬 +91-8527167311</span>
+              </div>
+              <div className="relative w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96">
+                <img
+                  src="/images/makhana_mint.png"
+                  alt="Contact Super Food Bharat"
+                  className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </>
+          }
+        />
 
         {/* Content Body */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">

@@ -213,7 +213,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Footer strip */}
         <div className="pt-8 border-t border-emerald-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-100/60 font-medium select-none">
           <div>
-            <span>Copyright © 2026 Super Food Bharat Herbs Private Limited. Made in Bharat 🇮🇳</span>
+            <span>Copyright © 2026 SuperFood Bharat Private Limited. Made in Bharat 🇮🇳</span>
           </div>
 
           <div className="flex items-center gap-6 text-xs text-emerald-100/70">

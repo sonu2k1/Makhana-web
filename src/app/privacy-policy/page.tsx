@@ -3,6 +3,7 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 
 export default function PrivacyPolicyPage() {
   const sections = [
@@ -107,27 +108,44 @@ export default function PrivacyPolicyPage() {
     <div className="min-h-screen flex flex-col bg-[#FAF8F5]">
       <Header />
 
-      <main className="flex-grow py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Header Banner */}
-          <div className="text-center space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/80 text-emerald-900 text-xs font-black uppercase tracking-wider border border-emerald-200">
-              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-              <span>Official Policy Document</span>
-            </div>
+      <main className="flex-grow">
+        {/* Page Hero Section matching Home Hero size */}
+        <PageHero
+          badgeText="🛡️ Official Policy Document • March 2026"
+          badgeBgClass="bg-[#7ca832]/15 text-[#2D5A27] border-[#7ca832]/30"
+          bgClass="bg-gradient-to-br from-[#F4F9F1] via-[#EBF3E6] to-[#E2EEDC]"
+          textAccentClass="text-[#2D5A27]"
+          titleLine1="Privacy & Data"
+          titleHighlight="Security Policy"
+          description="Your trust and data privacy are fundamental to everything we do at Superfoods Bharat. Learn how we collect, protect, and handle your information."
+          stats={[
+            { value: "256-Bit", label: "SSL Encryption" },
+            { value: "Zero", label: "Data Selling" },
+            { value: "RBI Approved", label: "Payments" },
+          ]}
+          buttonText="Read Terms Below"
+          buttonHref="#collection"
+          buttonClass="bg-[#2D5A27] hover:bg-[#1f401b] text-white"
+          rightGraphic={
+            <>
+              <div className="absolute top-4 right-2 sm:right-6 bg-white/90 backdrop-blur-md border border-white/60 shadow-lg px-3.5 py-1.5 rounded-full text-xs font-black text-emerald-900 z-20 flex items-center gap-1.5 animate-bounce-slow">
+                <span>🔒 Encrypted Browsing</span>
+              </div>
+              <div className="absolute bottom-10 left-2 sm:left-6 bg-white/90 backdrop-blur-md border border-white/60 shadow-lg px-3.5 py-1.5 rounded-full text-xs font-black text-amber-900 z-20 flex items-center gap-1.5 animate-bounce-slow">
+                <span>🇮🇳 IT Act Compliant</span>
+              </div>
+              <div className="relative w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96">
+                <img
+                  src="/images/makhana_salt.png"
+                  alt="Privacy & Data Security"
+                  className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </>
+          }
+        />
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1B3626] font-serif tracking-tight leading-tight">
-              Privacy &amp; Data Security Policy
-            </h1>
-
-            <p className="text-sm sm:text-base text-emerald-950/80 max-w-2xl mx-auto font-medium">
-              Your trust and data privacy are fundamental to everything we do at Superfoods Bharat. Learn how we collect, protect, and handle your information.
-            </p>
-
-            <div className="pt-2 text-xs font-bold text-emerald-800/60">
-              Last Updated &amp; Effective Date: March 1, 2026
-            </div>
-          </div>
+        <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-12">
 
           {/* Quick Security Highlights Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

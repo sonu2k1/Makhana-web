@@ -23,7 +23,7 @@ const FLAVORS: FlavorDetail[] = [
   {
     id: "makhana-salt",
     name: "Superfoods Bharat Roasted Makhana",
-    flavor: "Himalayan Pink Salt & Pepper",
+    flavor: "Himalayan Pink Salt",
     price: 180,
     image: "/images/makhana_salt.png",
     bgClass: "bg-gradient-to-br from-[#F4F9F1] via-[#EBF3E6] to-[#E2EEDC]",
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
     <section
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className={`w-full py-12 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-700 ease-in-out select-none relative overflow-hidden ${current.bgClass}`}
+      className={`w-full py-12 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-700 ease-in-out select-none relative overflow-hidden min-h-[520px] md:min-h-[580px] flex items-center ${current.bgClass}`}
     >
       {/* Background ambient lighting blurs */}
       <div className="absolute top-10 left-10 w-80 h-80 bg-white/40 rounded-full blur-3xl pointer-events-none" />
@@ -176,14 +176,14 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Heading */}
-          <div className="space-y-3">
+          <div className="space-y-3 min-h-[110px] md:min-h-[125px] flex flex-col justify-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-snug">
               Delicious Snacks, <br className="hidden sm:inline" />
-              <span className={`transition-all duration-500 ${current.textAccent}`}>
+              <span className={`transition-all duration-500 inline-block ${current.textAccent}`}>
                 {current.flavor}
               </span>
             </h1>
-            <p className="text-sm sm:text-base text-zinc-700/90 leading-relaxed max-w-xl font-medium">
+            <p className="text-sm sm:text-base text-zinc-700/90 leading-relaxed max-w-xl font-medium min-h-[48px]">
               {current.desc}
             </p>
           </div>
@@ -225,11 +225,10 @@ export const Hero: React.FC = () => {
                 <button
                   key={f.id}
                   onClick={() => handleDotClick(idx)}
-                  className={`transition-all duration-300 rounded-full cursor-pointer relative overflow-hidden ${
-                    isActive
+                  className={`transition-all duration-300 rounded-full cursor-pointer relative overflow-hidden ${isActive
                       ? "w-14 h-3 bg-zinc-300/80 border border-zinc-400/60 shadow-inner"
                       : "w-3 h-3 bg-zinc-300 hover:bg-zinc-400"
-                  }`}
+                    }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 >
                   {/* Progress fill bar inside active indicator pill */}
@@ -270,9 +269,8 @@ export const Hero: React.FC = () => {
 
             {/* Main Product Pouch Graphic with smooth scale/fade transition */}
             <div
-              className={`relative w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96 transition-all duration-500 ease-out transform ${
-                isAnimating ? "opacity-0 scale-95" : "opacity-100 scale-100"
-              }`}
+              className={`relative w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96 transition-all duration-500 ease-out transform ${isAnimating ? "opacity-0 scale-95" : "opacity-100 scale-100"
+                }`}
             >
               <Image
                 src={current.image}
