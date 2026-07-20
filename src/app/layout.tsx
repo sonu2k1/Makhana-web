@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { CookieConsent } from "@/components/CookieConsent";
 import { WhatsAppWidget } from "@/components/WhatsAppWidget";
+import { EntryPopupModal } from "@/components/EntryPopupModal";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         {children}
         <CookieConsent />
         <WhatsAppWidget />
+        <EntryPopupModal />
       </body>
     </html>
   );
