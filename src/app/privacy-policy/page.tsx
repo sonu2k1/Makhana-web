@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage() {
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium border-t border-emerald-500/20">
               <div>
                 <span className="block text-amber-300 font-bold mb-1">✉️ Email Support</span>
-                <span>bd@leiwenpharmaura.com</span>
+                <a href="mailto:Superfoodsbharat@gmail.com" className="hover:underline text-emerald-100">Superfoodsbharat@gmail.com</a>
               </div>
               <div>
                 <span className="block text-amber-300 font-bold mb-1">📍 Corporate Office</span>

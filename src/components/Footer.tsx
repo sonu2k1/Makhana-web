@@ -163,8 +163,8 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="text-amber-400 text-sm shrink-0">✉️</span>
-                <a href="mailto:bd@leiwenpharmaura.com" className="hover:text-amber-300 transition-colors">
-                  bd@leiwenpharmaura.com
+                <a href="mailto:Superfoodsbharat@gmail.com" className="hover:text-amber-300 transition-colors">
+                  Superfoodsbharat@gmail.com
                 </a>
               </div>
             </div>

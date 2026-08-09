@@ -157,7 +157,7 @@ export default function ContactPage() {
                     <div className="space-y-1">
                       <h4 className="text-xs font-black uppercase text-zinc-900 tracking-wider">Email Inquiry</h4>
                       <p className="text-xs text-[#7ca832] font-semibold hover:underline">
-                        <a href="mailto:bd@leiwenpharmaura.com">bd@leiwenpharmaura.com</a>
+                        <a href="mailto:Superfoodsbharat@gmail.com">Superfoodsbharat@gmail.com</a>
                       </p>
                       <p className="text-[10px] text-zinc-400">Response time: Within 24 business hours</p>
                     </div>
